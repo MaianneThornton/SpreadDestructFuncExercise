@@ -6,11 +6,16 @@ const jPDinos = [
 ];
 
 // 1b
-function seeDinos (a, ...b){
+function seeDinos(a, ...b) {
   console.log(a);
-  console.log([...b]);
+  console.log(b);
 }
 seeDinos(...jPDinos);
+/*
+Velociraptors
+[ 'Tyrannosaurus Rex', 'Dilophosaurus' ]
+*/
+
 
 // 2a
 const jPCharacters = {
@@ -20,29 +25,29 @@ const jPCharacters = {
 };
 
 // 2b
-seeCharacters = ({ellieSattler}) => {
+seeCharacters = ({ ellieSattler }) => {
   console.log(ellieSattler);
 }
-seeCharacters(jPCharacters);
+seeCharacters(jPCharacters); // Laura Dern
 
 // BONUS
 
 // 3a
 const jurassicParkMovies = [
   {
-  one: "Jurassic Park",
-  two: "The Lost World: Jurassic Park",
-  three: "Jurassic Park III"
-},
-{
-four: "Jurassic World",
-five: "Jurassic World: Fallen Kingdom",
-six: "Jurassic World: Dominion"
-}
+    one: "Jurassic Park",
+    two: "The Lost World: Jurassic Park",
+    three: "Jurassic Park III"
+  },
+  {
+    four: "Jurassic World",
+    five: "Jurassic World: Fallen Kingdom",
+    six: "Jurassic World: Dominion"
+  }
 ];
 
 // 3b
-function seeJPMovies ([{one, two, three},{four, five, six}]){
+function seeJPMovies([{ one, two, three }, { four, five, six }]) {
   console.log(one);
   console.log(two);
   console.log(three);
@@ -51,3 +56,23 @@ function seeJPMovies ([{one, two, three},{four, five, six}]){
   console.log(six);
 }
 seeJPMovies(jurassicParkMovies);
+/*
+Jurassic Park
+The Lost World: Jurassic Park
+Jurassic Park III
+Jurassic World
+Jurassic World: Fallen Kingdom
+Jurassic World: Dominion
+*/
+
+// OR 
+
+// seeJPMovies = ([{ one, two, three }, { four, five, six }]) => {
+//   console.log(one);
+//   console.log(two);
+//   console.log(three);
+//   console.log(four);
+//   console.log(five);
+//   console.log(six);
+// }
+// seeJPMovies(...jurassicParkMovies);
